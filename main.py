@@ -40,5 +40,12 @@ def main():
     phoneDiv = driver.find_element(By.CLASS_NAME, "phone-label")
     WebDriverWait(phoneDiv, 20).until(EC.element_to_be_clickable((By.TAG_NAME, "button"))).click()
 
+    driver.switch_to.default_content()
+    driver.implicitly_wait(10)
+    
+    grades = list(driver.find_elements(By.CLASS_NAME, 'assignment_graded' and 'title'))
+    driver.implicitly_wait(5)
+    for grade in grades:
+        print(grade.text)
 main()
 
