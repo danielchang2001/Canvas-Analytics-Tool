@@ -44,7 +44,7 @@ def main():
     driver.switch_to.default_content()
     driver.implicitly_wait(10)
 
-    # Find each score details table and grab avg score
+    # Find each score details table
     tables = driver.find_elements(By.CLASS_NAME, 'score_details_table')
     for table in tables:
         avg = table.find_element(By.TAG_NAME, 'td')
@@ -56,14 +56,26 @@ def main():
         tbody = tr.find_element_by_xpath("..")
 
         scoreID = table.get_attribute('id')
+        # There are edge cases where scoreID may be empty
         if scoreID:
+            # Navigate to correct dir
             score = scoreID.split('score_details_')
-            print(score1)
+            submissionID = 'submission_' + str(score[1])
+            tr = tbody.find_element(By.ID, submissionID)
+
+            # Find total possible points for each score
+            pointsPossible = tr.find_element(By.CLASS_NAME, 'points_possible')
+            pointsPos = pointsPossible.text
+
+            # Find user's score
+            gradeParent = tr.find_element(By.CLASS_NAME, 'grade')
+            userGrade = gradeParent.get_attribute('innerHTML').split('</span>\n                  ')
+            userGradeF = userGrade[-1].split('\n')[0]
+            print(userGradeF)
+
         else:
             continue
 
-        userGrade = tbody.find_element(By.CLASS_NAME, 'grade')
-        print(userGrade.get_attribute('innerHTML'))
         print(avg.get_attribute('innerHTML'))
 
 main()
