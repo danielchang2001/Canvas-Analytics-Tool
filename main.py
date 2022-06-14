@@ -43,9 +43,18 @@ def main():
     driver.switch_to.default_content()
     driver.implicitly_wait(10)
     
-    grades = list(driver.find_elements(By.CLASS_NAME, 'assignment_graded' and 'title'))
-    driver.implicitly_wait(5)
-    for grade in grades:
-        print(grade.text)
+    tables = driver.find_elements(By.CLASS_NAME, 'score_details_table')
+    for table in tables:
+        avg = table.find_element(By.TAG_NAME, 'td')
+        driver.implicitly_wait(3)
+        print(avg.get_attribute('innerHTML'))
+    # driver.implicitly_wait(5)
+    # for table in tables:
+    #     tbody = table.find_element(By.TAG_NAME, 'tbody')
+    #     tr = list(tbody.find_elements(By.TAG_NAME, 'td'))
+    #     driver.implicitly_wait(5)
+
+    #     print(tr[0].text)
+
 main()
 
