@@ -40,21 +40,31 @@ def main():
     phoneDiv = driver.find_element(By.CLASS_NAME, "phone-label")
     WebDriverWait(phoneDiv, 20).until(EC.element_to_be_clickable((By.TAG_NAME, "button"))).click()
 
+    # Switch out of iframe
     driver.switch_to.default_content()
     driver.implicitly_wait(10)
-    
+
+    # Find each score details table and grab avg score
     tables = driver.find_elements(By.CLASS_NAME, 'score_details_table')
     for table in tables:
         avg = table.find_element(By.TAG_NAME, 'td')
         driver.implicitly_wait(3)
-        print(avg.get_attribute('innerHTML'))
-    # driver.implicitly_wait(5)
-    # for table in tables:
-    #     tbody = table.find_element(By.TAG_NAME, 'tbody')
-    #     tr = list(tbody.find_elements(By.TAG_NAME, 'td'))
-    #     driver.implicitly_wait(5)
 
-    #     print(tr[0].text)
+        # Find user grade
+        td= table.find_element_by_xpath("..")
+        tr= td.find_element_by_xpath("..")
+        tbody = tr.find_element_by_xpath("..")
+
+        scoreID = table.get_attribute('id')
+        if scoreID:
+            score = scoreID.split('score_details_')
+            print(score1)
+        else:
+            continue
+
+        userGrade = tbody.find_element(By.CLASS_NAME, 'grade')
+        print(userGrade.get_attribute('innerHTML'))
+        print(avg.get_attribute('innerHTML'))
 
 main()
 
