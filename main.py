@@ -56,7 +56,7 @@ def main():
         tr= td.find_element_by_xpath("..")
         tbody = tr.find_element_by_xpath("..")
         driver.implicitly_wait(3)
-        
+
         scoreID = table.get_attribute('id')
         # There are edge cases where scoreID may be empty
         if scoreID:
@@ -64,10 +64,14 @@ def main():
             score = scoreID.split('score_details_')
             submissionID = 'submission_' + str(score[1])
             tr = tbody.find_element(By.ID, submissionID)
-
-            title = tr.find_element(By.TAG_NAME, 'a')
-            print(title.text)
-
+            # Grab title
+            titleEl = tr.find_element(By.TAG_NAME, 'a')
+            title = titleEl.get_attribute("innerHTML")
+            contextEl = tr.find_element(By.CLASS_NAME, 'context')
+            context = contextEl.get_attribute("innerHTML")
+            print(title)
+            print(context)
+            
             # Find total possible points for each score
             pointsPossible = tr.find_element(By.CLASS_NAME, 'points_possible')
             pointsPos = pointsPossible.text
@@ -79,11 +83,12 @@ def main():
             userGradeF = userGrade[-1].split('\n')[0]
             print(userGradeF)
 
-        else:
+        else: # Score ID empty
             continue
 
         print(avg.get_attribute('innerHTML'))
 
+        
 
 
 main()
