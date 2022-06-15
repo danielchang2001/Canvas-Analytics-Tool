@@ -6319,3 +6319,479 @@ JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeE
 
 ###!!! [Parent][PImageBridgeParent] Error: RunMessage(msgname=PImageBridge::Msg_WillClose) Channel closing: too late to send/recv, messages will be lost
 
+1655258772869	geckodriver	INFO	Listening on 127.0.0.1:59530
+1655258773911	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/yt/06_b4rzx4cqcc406f73t7jc40000gn/T/rust_mozprofileXwBaFX"
+1655258774412	Marionette	INFO	Marionette enabled
+2022-06-14 19:06:15.130 firefox-bin[3582:4157029] Warning: Expected min height of view: (<NSButton: 0x127079800>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2022-06-14 19:06:15.130 firefox-bin[3582:4157029] Warning: Expected min height of view: (<NSButton: 0x1341ed800>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2022-06-14 19:06:15.131 firefox-bin[3582:4157029] Warning: Expected min height of view: (<NSButton: 0x1341ee800>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2022-06-14 19:06:15.131 firefox-bin[3582:4157029] Warning: Expected min height of view: (<NSButton: 0x1341ef000>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2022-06-14 19:06:15.132 firefox-bin[3582:4157029] Warning: Expected min height of view: (<NSButton: 0x1341f1800>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2022-06-14 19:06:15.132 firefox-bin[3582:4157029] Warning: Expected min height of view: (<NSPopoverTouchBarItemButton: 0x1341f1000>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2022-06-14 19:06:15.133 firefox-bin[3582:4157029] Warning: Expected min height of view: (<NSPopoverTouchBarItemButton: 0x134576800>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/yt/06_b4rzx4cqcc406f73t7jc40000gn/T/rust_mozprofileXwBaFX/search.json.mozlz4", (void 0)))
+console.error: BackgroundUpdate: 
+  _reasonsToNotScheduleUpdates: Failed to check for Maintenance Service Registry Key: [Exception... "Component returned failure code: 0x80004001 (NS_ERROR_NOT_IMPLEMENTED) [nsIUpdateProcessor.getServiceRegKeyExists]"  nsresult: "0x80004001 (NS_ERROR_NOT_IMPLEMENTED)"  location: "JS frame :: resource://gre/modules/BackgroundUpdate.jsm :: _reasonsToNotScheduleUpdates :: line 241"  data: no]
+1655258776081	Marionette	INFO	Listening on port 59540
+Read port: 59540
+1655258776644	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://login.ucsc.edu"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://login.ucsc.edu"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1655258782654	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://api-268194b0.duosecurity.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1655258783235	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://api-268194b0.duosecurity.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://login.ucsc.edu"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://login.ucsc.edu"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://login.ucsc.edu"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://login.ucsc.edu"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1655258872880	geckodriver	INFO	Listening on 127.0.0.1:59677
+1655258873902	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/yt/06_b4rzx4cqcc406f73t7jc40000gn/T/rust_mozprofileevMGQs"
+1655258874371	Marionette	INFO	Marionette enabled
+2022-06-14 19:07:55.057 firefox-bin[3632:4158630] Warning: Expected min height of view: (<NSButton: 0x12adc2c00>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2022-06-14 19:07:55.057 firefox-bin[3632:4158630] Warning: Expected min height of view: (<NSButton: 0x12adc7c00>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2022-06-14 19:07:55.058 firefox-bin[3632:4158630] Warning: Expected min height of view: (<NSButton: 0x12adc4c00>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2022-06-14 19:07:55.059 firefox-bin[3632:4158630] Warning: Expected min height of view: (<NSButton: 0x12adc9c00>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2022-06-14 19:07:55.059 firefox-bin[3632:4158630] Warning: Expected min height of view: (<NSButton: 0x12adc3000>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2022-06-14 19:07:55.060 firefox-bin[3632:4158630] Warning: Expected min height of view: (<NSPopoverTouchBarItemButton: 0x12adc5000>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2022-06-14 19:07:55.060 firefox-bin[3632:4158630] Warning: Expected min height of view: (<NSPopoverTouchBarItemButton: 0x12aeddc00>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/yt/06_b4rzx4cqcc406f73t7jc40000gn/T/rust_mozprofileevMGQs/search.json.mozlz4", (void 0)))
+console.error: BackgroundUpdate: 
+  _reasonsToNotScheduleUpdates: Failed to check for Maintenance Service Registry Key: [Exception... "Component returned failure code: 0x80004001 (NS_ERROR_NOT_IMPLEMENTED) [nsIUpdateProcessor.getServiceRegKeyExists]"  nsresult: "0x80004001 (NS_ERROR_NOT_IMPLEMENTED)"  location: "JS frame :: resource://gre/modules/BackgroundUpdate.jsm :: _reasonsToNotScheduleUpdates :: line 241"  data: no]
+1655258875986	Marionette	INFO	Listening on port 59698
+Read port: 59698
+1655258876448	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://login.ucsc.edu"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://login.ucsc.edu"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1655258881668	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://api-268194b0.duosecurity.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1655258882338	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://api-268194b0.duosecurity.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://login.ucsc.edu"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://login.ucsc.edu"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://login.ucsc.edu"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://login.ucsc.edu"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1655258922169	geckodriver	INFO	Listening on 127.0.0.1:59790
+1655258923196	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/yt/06_b4rzx4cqcc406f73t7jc40000gn/T/rust_mozprofileNauL2R"
+1655258923678	Marionette	INFO	Marionette enabled
+2022-06-14 19:08:44.412 firefox-bin[3661:4159711] Warning: Expected min height of view: (<NSButton: 0x133733400>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2022-06-14 19:08:44.413 firefox-bin[3661:4159711] Warning: Expected min height of view: (<NSButton: 0x133733800>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2022-06-14 19:08:44.413 firefox-bin[3661:4159711] Warning: Expected min height of view: (<NSButton: 0x133735800>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2022-06-14 19:08:44.414 firefox-bin[3661:4159711] Warning: Expected min height of view: (<NSButton: 0x133736000>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2022-06-14 19:08:44.415 firefox-bin[3661:4159711] Warning: Expected min height of view: (<NSButton: 0x133736800>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2022-06-14 19:08:44.415 firefox-bin[3661:4159711] Warning: Expected min height of view: (<NSPopoverTouchBarItemButton: 0x133926800>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2022-06-14 19:08:44.416 firefox-bin[3661:4159711] Warning: Expected min height of view: (<NSPopoverTouchBarItemButton: 0x13392dc00>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/yt/06_b4rzx4cqcc406f73t7jc40000gn/T/rust_mozprofileNauL2R/search.json.mozlz4", (void 0)))
+console.error: BackgroundUpdate: 
+  _reasonsToNotScheduleUpdates: Failed to check for Maintenance Service Registry Key: [Exception... "Component returned failure code: 0x80004001 (NS_ERROR_NOT_IMPLEMENTED) [nsIUpdateProcessor.getServiceRegKeyExists]"  nsresult: "0x80004001 (NS_ERROR_NOT_IMPLEMENTED)"  location: "JS frame :: resource://gre/modules/BackgroundUpdate.jsm :: _reasonsToNotScheduleUpdates :: line 241"  data: no]
+1655258925397	Marionette	INFO	Listening on port 59801
+Read port: 59801
+1655258925813	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1655258926418	Marionette	INFO	Stopped listening on port 59540
+1655258928430	Marionette	INFO	Stopped listening on port 59698
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://login.ucsc.edu"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://login.ucsc.edu"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1655258934051	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://api-268194b0.duosecurity.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1655258934990	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1655258957603	Marionette	INFO	Stopped listening on port 59801
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+
+###!!! [Parent][PImageBridgeParent] Error: RunMessage(msgname=PImageBridge::Msg_WillClose) Channel closing: too late to send/recv, messages will be lost
+
+1655258962783	geckodriver	INFO	Listening on 127.0.0.1:59885
+1655258963811	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/yt/06_b4rzx4cqcc406f73t7jc40000gn/T/rust_mozprofile9RXjDr"
+1655258964197	Marionette	INFO	Marionette enabled
+2022-06-14 19:09:24.835 firefox-bin[3709:4160888] Warning: Expected min height of view: (<NSButton: 0x1381bc800>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2022-06-14 19:09:24.835 firefox-bin[3709:4160888] Warning: Expected min height of view: (<NSButton: 0x1381ba400>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2022-06-14 19:09:24.836 firefox-bin[3709:4160888] Warning: Expected min height of view: (<NSButton: 0x1381bac00>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2022-06-14 19:09:24.836 firefox-bin[3709:4160888] Warning: Expected min height of view: (<NSButton: 0x1381bb400>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2022-06-14 19:09:24.837 firefox-bin[3709:4160888] Warning: Expected min height of view: (<NSButton: 0x1381bb800>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2022-06-14 19:09:24.837 firefox-bin[3709:4160888] Warning: Expected min height of view: (<NSPopoverTouchBarItemButton: 0x1381bd400>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2022-06-14 19:09:24.838 firefox-bin[3709:4160888] Warning: Expected min height of view: (<NSPopoverTouchBarItemButton: 0x12ae33c00>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/yt/06_b4rzx4cqcc406f73t7jc40000gn/T/rust_mozprofile9RXjDr/search.json.mozlz4", (void 0)))
+console.error: BackgroundUpdate: 
+  _reasonsToNotScheduleUpdates: Failed to check for Maintenance Service Registry Key: [Exception... "Component returned failure code: 0x80004001 (NS_ERROR_NOT_IMPLEMENTED) [nsIUpdateProcessor.getServiceRegKeyExists]"  nsresult: "0x80004001 (NS_ERROR_NOT_IMPLEMENTED)"  location: "JS frame :: resource://gre/modules/BackgroundUpdate.jsm :: _reasonsToNotScheduleUpdates :: line 241"  data: no]
+1655258965798	Marionette	INFO	Listening on port 59895
+Read port: 59895
+1655258966205	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://login.ucsc.edu"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://login.ucsc.edu"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1655258971399	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://api-268194b0.duosecurity.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1655258971927	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://api-268194b0.duosecurity.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://login.ucsc.edu"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://login.ucsc.edu"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://login.ucsc.edu"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://login.ucsc.edu"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1655259009991	Marionette	INFO	Stopped listening on port 59895
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PHttpChannel::Msg_DeleteSelf) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][PImageBridgeParent] Error: RunMessage(msgname=PImageBridge::Msg_WillClose) Channel closing: too late to send/recv, messages will be lost
+
+1655315192359	geckodriver	INFO	Listening on 127.0.0.1:64346
+1655315193392	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/yt/06_b4rzx4cqcc406f73t7jc40000gn/T/rust_mozprofileWNwAlh"
+1655315193913	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/yt/06_b4rzx4cqcc406f73t7jc40000gn/T/rust_mozprofileWNwAlh/search.json.mozlz4", (void 0)))
+console.error: BackgroundUpdate: 
+  _reasonsToNotScheduleUpdates: Failed to check for Maintenance Service Registry Key: [Exception... "Component returned failure code: 0x80004001 (NS_ERROR_NOT_IMPLEMENTED) [nsIUpdateProcessor.getServiceRegKeyExists]"  nsresult: "0x80004001 (NS_ERROR_NOT_IMPLEMENTED)"  location: "JS frame :: resource://gre/modules/BackgroundUpdate.jsm :: _reasonsToNotScheduleUpdates :: line 241"  data: no]
+1655315195862	Marionette	INFO	Listening on port 64363
+Read port: 64363
+1655315195979	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://login.ucsc.edu"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://login.ucsc.edu"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1655315198323	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://api-268194b0.duosecurity.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1655315198867	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://api-268194b0.duosecurity.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://login.ucsc.edu"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://login.ucsc.edu"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://login.ucsc.edu"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://login.ucsc.edu"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+[Child 6529, MediaDecoderStateMachine #1] WARNING: 124a461a0 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:317
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+JavaScript error: https://favtutor.com/resources/js/custom-script.js, line 1: TypeError: $(...).offset() is undefined
+1655315287704	geckodriver	INFO	Listening on 127.0.0.1:64489
+1655315288726	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/yt/06_b4rzx4cqcc406f73t7jc40000gn/T/rust_mozprofileoIuGFi"
+1655315289304	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/yt/06_b4rzx4cqcc406f73t7jc40000gn/T/rust_mozprofileoIuGFi/search.json.mozlz4", (void 0)))
+console.error: BackgroundUpdate: 
+  _reasonsToNotScheduleUpdates: Failed to check for Maintenance Service Registry Key: [Exception... "Component returned failure code: 0x80004001 (NS_ERROR_NOT_IMPLEMENTED) [nsIUpdateProcessor.getServiceRegKeyExists]"  nsresult: "0x80004001 (NS_ERROR_NOT_IMPLEMENTED)"  location: "JS frame :: resource://gre/modules/BackgroundUpdate.jsm :: _reasonsToNotScheduleUpdates :: line 241"  data: no]
+1655315290697	Marionette	INFO	Listening on port 64504
+Read port: 64504
+1655315290807	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1655315295104	Marionette	INFO	Stopped listening on port 64363
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://login.ucsc.edu"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://login.ucsc.edu"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1655315295527	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://api-268194b0.duosecurity.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1655315296006	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://api-268194b0.duosecurity.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://login.ucsc.edu"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://login.ucsc.edu"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://login.ucsc.edu"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://login.ucsc.edu"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1655315344949	geckodriver	INFO	Listening on 127.0.0.1:64589
+1655315345973	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/yt/06_b4rzx4cqcc406f73t7jc40000gn/T/rust_mozprofilegss7xC"
+1655315346381	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/yt/06_b4rzx4cqcc406f73t7jc40000gn/T/rust_mozprofilegss7xC/search.json.mozlz4", (void 0)))
+console.error: BackgroundUpdate: 
+  _reasonsToNotScheduleUpdates: Failed to check for Maintenance Service Registry Key: [Exception... "Component returned failure code: 0x80004001 (NS_ERROR_NOT_IMPLEMENTED) [nsIUpdateProcessor.getServiceRegKeyExists]"  nsresult: "0x80004001 (NS_ERROR_NOT_IMPLEMENTED)"  location: "JS frame :: resource://gre/modules/BackgroundUpdate.jsm :: _reasonsToNotScheduleUpdates :: line 241"  data: no]
+1655315347972	Marionette	INFO	Listening on port 64606
+Read port: 64606
+1655315348060	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1655315349448	Marionette	INFO	Stopped listening on port 64504
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://login.ucsc.edu"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://login.ucsc.edu"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1655315350236	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://api-268194b0.duosecurity.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1655315350745	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://api-268194b0.duosecurity.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://login.ucsc.edu"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://login.ucsc.edu"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://login.ucsc.edu"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://login.ucsc.edu"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript warning: https://pagead2.googlesyndication.com/bg/WNU-PBcfckz-ZJNp77gnGR6umJykUHtANN-D9hj8G6g.js line 2 > eval line 1044 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/KTHYOna8VhrtXL7WgNcsIkAo3r0EoLxY2-h6-FKeiG0.js line 2 > eval line 4688 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/CnoZAs8LLGLdiZmvwH5JG-0Ol-GPeQ_utKIi1OQFCbs.js line 2 > eval line 6236 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1655315654350	geckodriver	INFO	Listening on 127.0.0.1:64947
+1655315655387	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/yt/06_b4rzx4cqcc406f73t7jc40000gn/T/rust_mozprofileqsx0xS"
+1655315655935	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/yt/06_b4rzx4cqcc406f73t7jc40000gn/T/rust_mozprofileqsx0xS/search.json.mozlz4", (void 0)))
+console.error: BackgroundUpdate: 
+  _reasonsToNotScheduleUpdates: Failed to check for Maintenance Service Registry Key: [Exception... "Component returned failure code: 0x80004001 (NS_ERROR_NOT_IMPLEMENTED) [nsIUpdateProcessor.getServiceRegKeyExists]"  nsresult: "0x80004001 (NS_ERROR_NOT_IMPLEMENTED)"  location: "JS frame :: resource://gre/modules/BackgroundUpdate.jsm :: _reasonsToNotScheduleUpdates :: line 241"  data: no]
+1655315657329	Marionette	INFO	Listening on port 64965
+Read port: 64965
+1655315657361	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://login.ucsc.edu"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://login.ucsc.edu"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1655315659683	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://api-268194b0.duosecurity.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1655315660268	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://api-268194b0.duosecurity.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://login.ucsc.edu"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://login.ucsc.edu"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://login.ucsc.edu"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://login.ucsc.edu"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1655315699788	Marionette	INFO	Stopped listening on port 64606
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PContent::Reply_DiscardBrowsingContext) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PContent::Reply_DiscardBrowsingContext) Channel closing: too late to send/recv, messages will be lost
+
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+
+###!!! [Child][PContentChild] Error: Send(msgname=PContent::Msg_DiscardBrowsingContext) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: Send(msgname=PContent::Reply_DiscardBrowsingContext) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PContent::Msg_DiscardWindowContext) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PContent::Msg_DiscardWindowContext) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PContent::Msg_DiscardWindowContext) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PContent::Msg_DiscardWindowContext) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: Send(msgname=PHttpChannel::Msg___delete__) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: Send(msgname=PNecko::Msg_RemoveRequestContext) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Msg_DestroyBrowsingContextGroup) Closed channel: cannot send/recv
+
+
+###!!! [Parent][PImageBridgeParent] Error: RunMessage(msgname=PImageBridge::Msg_WillClose) Channel closing: too late to send/recv, messages will be lost
+

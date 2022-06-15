@@ -48,10 +48,15 @@ def main():
     tables = driver.find_elements(By.CLASS_NAME, 'score_details_table')
     driver.implicitly_wait(3)
     for table in tables:
+        # Get class average score for assignment
         avg1 = table.find_element(By.TAG_NAME, 'td')
         avg2 = (avg1.get_attribute('innerHTML').split('\n                        '))[-1]
         avg = (avg2.split('\n'))[0]
-        print("avg: ", avg)
+
+        # Skip if table is comment not score table
+        if '<span' in avg:
+            continue
+        print("avg: ", float(avg))
         driver.implicitly_wait(3)
 
         # Find user grade
@@ -67,7 +72,8 @@ def main():
             score = scoreID.split('score_details_')
             submissionID = 'submission_' + str(score[1])
             tr = tbody.find_element(By.ID, submissionID)
-            # Grab title and assignment type (hw, quiz, final, etc.)
+
+            # Grab assignment title and context (hw, quiz, final, etc.)
             titleEl = tr.find_element(By.TAG_NAME, 'a')
             title = titleEl.get_attribute("innerHTML")
             contextEl = tr.find_element(By.CLASS_NAME, 'context')
@@ -78,13 +84,13 @@ def main():
             # Find total possible points for each score
             pointsPossible = tr.find_element(By.CLASS_NAME, 'points_possible')
             pointsPos = pointsPossible.text
-            print("out of: ", pointsPos)
+            print("out of: ", float(pointsPos))
 
             # Find user's score
             gradeParent = tr.find_element(By.CLASS_NAME, 'grade')
             userGrade = gradeParent.get_attribute('innerHTML').split('</span>\n                  ')
             userGradeF = userGrade[-1].split('\n')[0]
-            print("grade:", userGradeF)
+            print("grade:", float(userGradeF))
 
         else: # Score ID empty
             continue
