@@ -17,7 +17,7 @@ def main():
     driver.implicitly_wait(8)
 
     # Canvas
-    driver.get('https://canvas.ucsc.edu/courses/52588/grades')
+    driver.get('https://canvas.ucsc.edu/courses/52596/grades')
 
     # Send username
     emailBox = driver.find_element(By.ID, "username")
@@ -44,7 +44,12 @@ def main():
     driver.switch_to.default_content()
     driver.implicitly_wait(20)
     
-    # Find grade weighting and put in dict
+    # Find grade weighting and put in dict. Also initialize total points possible, average points, and final average dictionaries. 
+    # weightsDict - Weights of each category with respective values in 0.XX format.
+    # pointsDict - Total possible points of each category with respective values in 0.XX format.
+    # avgDict - Average points of each category with respective values in 0.XX format.
+    # realAvgDict - Final calculated average of each respective category. All category values added up divided by 100 equals the final class average.
+
     weightDict = {}
     pointsDict = {}
     avgDict = {}
@@ -110,6 +115,7 @@ def main():
             userGradeF = userGrade[-1].split('\n')[0]
             print("grade:", float(userGradeF))
 
+            # Adds up total average points and total points possible and puts them in dictionaries
             for k in weightDict.keys():
                 if k == context:
                     pointsDict[k] += float(pointsPos)
@@ -119,8 +125,10 @@ def main():
             continue
         
         print("-----------------\n")
-        
+
     print(weightDict)
+    # Calculate the average class score using total average scores and total points possible for each grade category. 
+    # The total avg percentage for each category is then multiplied by the respective weights.
     totalGrade = 0
     for k in weightDict.keys():
         realAvgDict[k] = (float(avgDict[k]) / float(pointsDict[k])) * 100 * weightDict[k]
