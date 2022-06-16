@@ -46,6 +46,9 @@ def main():
     
     # Find grade weighting and put in dict
     weightDict = {}
+    pointsDict = {}
+    avgDict = {}
+    realAvgDict = {}
     weightTable = driver.find_element(By.CLASS_NAME, 'summary')
     weightBody = weightTable.find_element(By.TAG_NAME, 'tbody')
     weightRow = weightBody.find_elements(By.TAG_NAME, 'th')
@@ -53,7 +56,10 @@ def main():
     for context, percent in zip(weightRow, weightRow2):
         if str(context.get_attribute('innerHTML')) == 'Total':
             continue
-        weightDict[str(context.get_attribute('innerHTML'))] = float(((percent.get_attribute('innerHTML')).split('%'))[0])
+        weightDict[str(context.get_attribute('innerHTML'))] = float(((percent.get_attribute('innerHTML')).split('%'))[0]) / 100
+        pointsDict[str(context.get_attribute('innerHTML'))] = 0
+        avgDict[str(context.get_attribute('innerHTML'))] = 0
+        realAvgDict[str(context.get_attribute('innerHTML'))] = 0
     print(weightDict)
 
     # Find each score details table
@@ -104,9 +110,27 @@ def main():
             userGradeF = userGrade[-1].split('\n')[0]
             print("grade:", float(userGradeF))
 
+            for k in weightDict.keys():
+                if k == context:
+                    pointsDict[k] += float(pointsPos)
+                    avgDict[k] += float(avg)
+
         else: # Score ID empty
             continue
+        
         print("-----------------\n")
+        
+    print(weightDict)
+    totalGrade = 0
+    for k in weightDict.keys():
+        realAvgDict[k] = (float(avgDict[k]) / float(pointsDict[k])) * 100 * weightDict[k]
+        totalGrade += realAvgDict[k]
+
+    totalGrade = totalGrade / 100
+    print(pointsDict)
+    print(avgDict)
+    print(realAvgDict)
+    print(totalGrade)
 
 main()
 
