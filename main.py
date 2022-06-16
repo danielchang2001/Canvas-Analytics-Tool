@@ -43,6 +43,18 @@ def main():
     # Switch out of iframe
     driver.switch_to.default_content()
     driver.implicitly_wait(20)
+    
+    # Find grade weighting and put in dict
+    weightDict = {}
+    weightTable = driver.find_element(By.CLASS_NAME, 'summary')
+    weightBody = weightTable.find_element(By.TAG_NAME, 'tbody')
+    weightRow = weightBody.find_elements(By.TAG_NAME, 'th')
+    weightRow2 = weightBody.find_elements(By.TAG_NAME, 'td')
+    for context, percent in zip(weightRow, weightRow2):
+        if str(context.get_attribute('innerHTML')) == 'Total':
+            continue
+        weightDict[str(context.get_attribute('innerHTML'))] = float(((percent.get_attribute('innerHTML')).split('%'))[0])
+    print(weightDict)
 
     # Find each score details table
     tables = driver.find_elements(By.CLASS_NAME, 'score_details_table')
