@@ -14,7 +14,7 @@ def main():
     twoAuth = raw_input("Choose preferred 2FA (push, phone, pass): ")
     if twoAuth == 'pass':
         print("Since pass requires you to enter the password manually, you will have to complete the two factor authentication yourself.")
-
+    customWeights = raw_input("In case the weights on Canvas are inaccurate, would you like to enter in custom weights? (y/n): ")
     # Setup webdriver
     driver = webdriver.Firefox(executable_path='./geckodriver')
     driver.implicitly_wait(8)
@@ -58,6 +58,7 @@ def main():
     # realAvgDict - Final calculated average of each respective category. All category values added up divided by 100 equals the final class average.
 
     weightDict = {}
+    customWeightDict = {}
     pointsDict = {}
     avgDict = {}
     realAvgDict = {}
@@ -70,7 +71,9 @@ def main():
     for context, percent in zip(weightRow, weightRow2):
         if str(context.get_attribute('innerHTML')) == 'Total':
             continue
+        customWeight = raw_input("Enter custom weight for '" + str(context.get_attribute('innerHTML')) + "' category (eg. type 40 if 40%): ")
         weightDict[str(context.get_attribute('innerHTML'))] = float(((percent.get_attribute('innerHTML')).split('%'))[0]) / 100
+        customWeightDict[str(context.get_attribute('innerHTML'))] = float(customWeight)  / 100
         pointsDict[str(context.get_attribute('innerHTML'))] = 0
         avgDict[str(context.get_attribute('innerHTML'))] = 0
         realAvgDict[str(context.get_attribute('innerHTML'))] = 0
@@ -144,8 +147,12 @@ def main():
     avgGradeF = 0
     userGradeF = 0
     for k in weightDict.keys():
-        realAvgDict[k] = (float(avgDict[k]) / float(pointsDict[k])) * 100 * weightDict[k]
-        realUserDict[k] = (float(userDict[k]) / float(pointsDict[k])) * 100 * weightDict[k]
+        if customWeights == 'y':
+            realAvgDict[k] = (float(avgDict[k]) / float(pointsDict[k])) * 100 * customWeightDict[k]
+            realUserDict[k] = (float(userDict[k]) / float(pointsDict[k])) * 100 * customWeightDict[k]
+        if customWeights == 'n':
+            realAvgDict[k] = (float(avgDict[k]) / float(pointsDict[k])) * 100 * weightDict[k]
+            realUserDict[k] = (float(userDict[k]) / float(pointsDict[k])) * 100 * weightDict[k]
         avgGradeF += realAvgDict[k]
         userGradeF += realUserDict[k]
 
