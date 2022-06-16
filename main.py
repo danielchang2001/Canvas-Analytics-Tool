@@ -10,7 +10,10 @@ from bs4 import BeautifulSoup
 def main():
     # Login input
     email = raw_input("Enter your CruzID: ")
-    password = getpass("Enter your Gold Password: ")
+    password = getpass("Enter your Gold password: ")
+    twoAuth = raw_input("Choose preferred 2FA (push, phone, pass): ")
+    if twoAuth == 'pass':
+        print("Since pass requires you to enter the password manually, you will have to complete the two factor authentication yourself.")
 
     # Setup webdriver
     driver = webdriver.Firefox(executable_path='./geckodriver')
@@ -36,9 +39,13 @@ def main():
     driver.switch_to.frame(iframe)
     driver.implicitly_wait(10)
 
-    # Click 'Call Me' button
-    phoneDiv = driver.find_element(By.CLASS_NAME, "phone-label")
-    WebDriverWait(phoneDiv, 20).until(EC.element_to_be_clickable((By.TAG_NAME, "button"))).click()
+    if twoAuth == 'phone':
+        # Click 'Call Me' button
+        phoneDiv = driver.find_element(By.CLASS_NAME, "phone-label")
+        WebDriverWait(phoneDiv, 20).until(EC.element_to_be_clickable((By.TAG_NAME, "button"))).click()
+    if twoAuth == 'push':
+        pushDiv = driver.find_element(By.CLASS_NAME, "push-label")
+        WebDriverWait(pushDiv, 20).until(EC.element_to_be_clickable((By.TAG_NAME, "button"))).click()
 
     # Switch out of iframe
     driver.switch_to.default_content()
@@ -130,7 +137,7 @@ def main():
             continue
         
         print("-----------------\n")
-
+    
     print(weightDict)
     # Calculate the average class score using total average scores and total points possible for each grade category. 
     # The total avg percentage for each category is then multiplied by the respective weights.
