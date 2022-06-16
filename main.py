@@ -147,10 +147,10 @@ def main():
     avgGradeF = 0
     userGradeF = 0
     for k in weightDict.keys():
-        if customWeights == 'y':
+        if customWeights == ('y' or 'yes' or 'Y' or 'Yes'):
             realAvgDict[k] = (float(avgDict[k]) / float(pointsDict[k])) * 100 * customWeightDict[k]
             realUserDict[k] = (float(userDict[k]) / float(pointsDict[k])) * 100 * customWeightDict[k]
-        if customWeights == 'n':
+        if customWeights == ('n' or 'no' or 'N' or 'No'):
             realAvgDict[k] = (float(avgDict[k]) / float(pointsDict[k])) * 100 * weightDict[k]
             realUserDict[k] = (float(userDict[k]) / float(pointsDict[k])) * 100 * weightDict[k]
         avgGradeF += realAvgDict[k]
