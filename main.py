@@ -12,12 +12,14 @@ import curses
 
 from os import system, name
 
+# Clears command line
 def clear(): 
     if name == 'nt': 
         x = system('cls') 
     else: 
         x = system('clear') 
 
+# Function to calculate class average stats
 def avg():
     clear()
     # Login input
@@ -27,13 +29,7 @@ def avg():
     if (customWeights == 'y') or (customWeights == 'yes') or (customWeights == 'Y') or (customWeights == 'Yes'):
         print("\n     You will be prompted to enter custom weights once the page loads.")
     twoAuth = raw_input("\nChoose preferred 2FA (push, phone, pass): ")
-    # if twoAuth == 'phone':
-    #     print("\n     Press 1 when your phone rings.")
-    # if twoAuth == 'push':
-    #     print("\n     Push accept on the Duo app.")
-    # if twoAuth == 'pass':
-    #     print("\n     Since pass requires you to enter the password manually, you will have to complete the two factor authentication yourself.")
-    # Setup webdriver
+
     driver = webdriver.Firefox(executable_path='./geckodriver')
     driver.implicitly_wait(8)
 
@@ -56,15 +52,17 @@ def avg():
     iframe = driver.find_element_by_xpath("//iframe[@id='duo_iframe']")
     driver.switch_to.frame(iframe)
     driver.implicitly_wait(10)
-
+        
+    # Click 'Call Me' button
     if twoAuth == 'phone':
-        # Click 'Call Me' button
         phoneDiv = driver.find_element(By.CLASS_NAME, "phone-label")
         WebDriverWait(phoneDiv, 200).until(EC.element_to_be_clickable((By.TAG_NAME, "button"))).click()
+    # Click 'Push' button
     if twoAuth == 'push':
         pushDiv = driver.find_element(By.CLASS_NAME, "push-label")
         WebDriverWait(pushDiv, 200).until(EC.element_to_be_clickable((By.TAG_NAME, "button"))).click()
-        
+    # For password 2FA, user must push the button manually.
+
     # Switch out of iframe
     driver.switch_to.default_content()
     driver.implicitly_wait(2000)
@@ -99,7 +97,6 @@ def avg():
         realAvgDict[str(context.get_attribute('innerHTML'))] = 0
         userDict[str(context.get_attribute('innerHTML'))] = 0
         realUserDict[str(context.get_attribute('innerHTML'))] = 0
-    # print(weightDict)
 
     # Find each score details table
     tables = driver.find_elements(By.CLASS_NAME, 'score_details_table')
@@ -113,7 +110,7 @@ def avg():
         # Skip if table is comment not score table
         if '<span' in avg:
             continue
-        # print("avg: ", float(avg))
+
         driver.implicitly_wait(3)
 
         # Find user grade
@@ -159,7 +156,6 @@ def avg():
         else: # Score ID empty
             continue
     
-    # print(weightDict)
     # Calculate the average class score using total average scores and total points possible for each grade category. 
     # The total avg percentage for each category is then multiplied by the respective weights.
     avgGradeF = 0
@@ -181,9 +177,10 @@ def avg():
     print("Your current grade (without counting any extra credit) is " + str(userGradeF))
     print("\n")
 
-
+# --------------- Curses code below ---------------
 menu = ['Class Average', 'Calculate Score', 'Exit']
 
+# Print menu
 def print_menu(stdscr, currentRow):
     stdscr.clear()
     h, w = stdscr.getmaxyx()
@@ -200,6 +197,7 @@ def print_menu(stdscr, currentRow):
 
     stdscr.refresh()
 
+# Main menu
 def main(stdscr):
     curses.curs_set(0)
     curses.init_pair(1, curses.COLOR_BLACK, curses.COLOR_WHITE)
@@ -217,11 +215,10 @@ def main(stdscr):
         elif key == curses.KEY_DOWN and currentRow < len(menu) - 1:
             currentRow += 1
         elif key == curses.KEY_ENTER or key in [10,13]:
-            # stdscr.addstr(0, 0, "{}".format(menu[currentRow]))
-            # stdscr.refresh()
-            # stdscr.getch()
+            # If exit chosen
             if currentRow == len(menu)-1:
                 break
+            # If class average chosen
             elif currentRow == len(menu)-3:
                 stdscr.refresh()
                 curses.endwin()
