@@ -7,7 +7,13 @@ from selenium.webdriver.support import expected_conditions as EC
 from getpass import getpass
 from bs4 import BeautifulSoup
 
-def main():
+import time
+import curses
+import os
+
+clear = lambda: os.system('cls')
+
+def avg():
     # Login input
     email = raw_input("\nEnter your CruzID: ")
     password = getpass("Enter your Gold password: ")
@@ -164,8 +170,56 @@ def main():
     print("===== Average class grade Vs. Your grade =====")
     print("==============================================")
     print("\nCurrent average class grade (without counting any extra credit) is " + str(avgGradeF))
-    print("\nYour current grade (without counting any extra credit) is " + str(userGradeF))
+    print("Your current grade (without counting any extra credit) is " + str(userGradeF))
     print("\n")
 
-main()
 
+menu = ['Class Average', 'Calculate Score', 'Exit']
+
+def print_menu(stdscr, currentRow):
+    stdscr.clear()
+    h, w = stdscr.getmaxyx()
+
+    for i, row in enumerate(menu):
+        x = w//2 - len(row)//2
+        y = h//2 - len(menu)//2 + i
+        if i == currentRow:
+            stdscr.attron(curses.color_pair(1))
+            stdscr.addstr(y,x,row)
+            stdscr.attroff(curses.color_pair(1))
+        else:
+            stdscr.addstr(y, x, row)
+
+    stdscr.refresh()
+
+def main(stdscr):
+    curses.curs_set(0)
+    curses.init_pair(1, curses.COLOR_BLACK, curses.COLOR_WHITE)
+    
+    currentRow = 0;
+
+    print_menu(stdscr, currentRow)
+
+    while 1:
+        key = stdscr.getch()
+        stdscr.clear()
+
+        if key == curses.KEY_UP and currentRow > 0:
+            currentRow -= 1
+        elif key == curses.KEY_DOWN and currentRow < len(menu) - 1:
+            currentRow += 1
+        elif key == curses.KEY_ENTER or key in [10,13]:
+            # stdscr.addstr(0, 0, "{}".format(menu[currentRow]))
+            # stdscr.refresh()
+            # stdscr.getch()
+            if currentRow == len(menu)-1:
+                break
+            elif currentRow == len(menu)-2:
+                stdscr.refresh()
+                curses.endwin()
+                avg()
+
+        print_menu(stdscr, currentRow)
+        stdscr.refresh()
+
+curses.wrapper(main)
