@@ -9,11 +9,17 @@ from bs4 import BeautifulSoup
 
 import time
 import curses
-import os
 
-clear = lambda: os.system('cls')
+from os import system, name
+
+def clear(): 
+    if name == 'nt': 
+        x = system('cls') 
+    else: 
+        x = system('clear') 
 
 def avg():
+    clear()
     # Login input
     email = raw_input("\nEnter your CruzID: ")
     password = getpass("Enter your Gold password: ")
@@ -21,12 +27,12 @@ def avg():
     if (customWeights == 'y') or (customWeights == 'yes') or (customWeights == 'Y') or (customWeights == 'Yes'):
         print("\n     You will be prompted to enter custom weights once the page loads.")
     twoAuth = raw_input("\nChoose preferred 2FA (push, phone, pass): ")
-    if twoAuth == 'phone':
-        print("\n     Press 1 when your phone rings.")
-    if twoAuth == 'push':
-        print("\n     Push accept on the Duo app.")
-    if twoAuth == 'pass':
-        print("\n     Since pass requires you to enter the password manually, you will have to complete the two factor authentication yourself.")
+    # if twoAuth == 'phone':
+    #     print("\n     Press 1 when your phone rings.")
+    # if twoAuth == 'push':
+    #     print("\n     Push accept on the Duo app.")
+    # if twoAuth == 'pass':
+    #     print("\n     Since pass requires you to enter the password manually, you will have to complete the two factor authentication yourself.")
     # Setup webdriver
     driver = webdriver.Firefox(executable_path='./geckodriver')
     driver.implicitly_wait(8)
@@ -54,21 +60,21 @@ def avg():
     if twoAuth == 'phone':
         # Click 'Call Me' button
         phoneDiv = driver.find_element(By.CLASS_NAME, "phone-label")
-        WebDriverWait(phoneDiv, 20).until(EC.element_to_be_clickable((By.TAG_NAME, "button"))).click()
+        WebDriverWait(phoneDiv, 200).until(EC.element_to_be_clickable((By.TAG_NAME, "button"))).click()
     if twoAuth == 'push':
         pushDiv = driver.find_element(By.CLASS_NAME, "push-label")
-        WebDriverWait(pushDiv, 20).until(EC.element_to_be_clickable((By.TAG_NAME, "button"))).click()
-
+        WebDriverWait(pushDiv, 200).until(EC.element_to_be_clickable((By.TAG_NAME, "button"))).click()
+        
     # Switch out of iframe
     driver.switch_to.default_content()
-    driver.implicitly_wait(20)
+    driver.implicitly_wait(2000)
     
     # Find grade weighting and put in dict. Also initialize total points possible, average points, and final average dictionaries. 
     # weightsDict - Weights of each category with respective values in 0.XX format.
     # pointsDict - Total possible points of each category with respective values in 0.XX format.
     # avgDict - Average points of each category with respective values in 0.XX format.
     # realAvgDict - Final calculated average of each respective category. All category values added up divided by 100 equals the final class average.
-
+    
     weightDict = {}
     customWeightDict = {}
     pointsDict = {}
@@ -80,6 +86,7 @@ def avg():
     weightBody = weightTable.find_element(By.TAG_NAME, 'tbody')
     weightRow = weightBody.find_elements(By.TAG_NAME, 'th')
     weightRow2 = weightBody.find_elements(By.TAG_NAME, 'td')
+    clear()
     for context, percent in zip(weightRow, weightRow2):
         if str(context.get_attribute('innerHTML')) == 'Total':
             continue
@@ -166,7 +173,8 @@ def avg():
             realUserDict[k] = (float(userDict[k]) / float(pointsDict[k])) * 100 * weightDict[k]
         avgGradeF += realAvgDict[k]
         userGradeF += realUserDict[k]
-    print("\n\n==============================================")
+    clear()
+    print("==============================================")
     print("===== Average class grade Vs. Your grade =====")
     print("==============================================")
     print("\nCurrent average class grade (without counting any extra credit) is " + str(avgGradeF))
@@ -214,10 +222,11 @@ def main(stdscr):
             # stdscr.getch()
             if currentRow == len(menu)-1:
                 break
-            elif currentRow == len(menu)-2:
+            elif currentRow == len(menu)-3:
                 stdscr.refresh()
                 curses.endwin()
                 avg()
+                break
 
         print_menu(stdscr, currentRow)
         stdscr.refresh()
