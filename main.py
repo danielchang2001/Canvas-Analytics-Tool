@@ -73,7 +73,7 @@ def avg():
     # pointsDict - Total possible points of each category with respective values in 0.XX format.
     # avgDict - Average points of each category with respective values in 0.XX format.
     # realAvgDict - Final calculated average of each respective category. All category values added up divided by 100 equals the final class average.
-    
+
     weightDict = {}
     customWeightDict = {}
     pointsDict = {}
@@ -99,6 +99,9 @@ def avg():
         realAvgDict[str(context.get_attribute('innerHTML'))] = 0
         userDict[str(context.get_attribute('innerHTML'))] = 0
         realUserDict[str(context.get_attribute('innerHTML'))] = 0
+
+    breadcrumbs = driver.find_element(By.ID, 'breadcrumbs').find_elements(By.TAG_NAME, 'span')
+    className = breadcrumbs[2].get_attribute('innerHTML')
 
     # Find each score details table
     tables = driver.find_elements(By.CLASS_NAME, 'score_details_table')
@@ -172,6 +175,9 @@ def avg():
         avgGradeF += realAvgDict[k]
         userGradeF += realUserDict[k]
     clear()
+    print("\n")
+    print('\033[1m' + className.center(74))
+    print '\033[0m'
     print("+----------------+--------------+------------------+---------------------+")
     print("|    Category    |    Weight    |    Your Score    |    Class Average    |")
     print("+----------------+--------------+------------------+---------------------+")
@@ -184,11 +190,13 @@ def avg():
     print("| Total          |              |                  |                     |")
     print("+----------------+--------------+------------------+---------------------+")
 
-    addScores = raw_input("\nWould you like to add any 'what if' scores and recalculate? (y/n): ")
-    if (addScores == 'y') or (addScores == 'yes') or (addScores == 'Y') or (addScores == 'Yes'):
-        print("okay")
-    else:
-        curses.wrapper(main)
+    while 1:
+        addScores = raw_input("\nWould you like to add a 'what if' score and recalculate your grade? (y/n): ")
+        if (addScores == 'y') or (addScores == 'yes') or (addScores == 'Y') or (addScores == 'Yes'):
+            print("okay")
+        else:
+            curses.wrapper(main)
+            break
     
 
 # --------------- Curses code below ---------------
