@@ -92,6 +92,7 @@ def avg():
             customWeight = raw_input("Enter custom weight for '" + str(context.get_attribute('innerHTML')) + "' category (eg. type 40 if 40%): ")
             customWeightDict[str(context.get_attribute('innerHTML'))] = float(customWeight)  / 100
         weightDict[str(context.get_attribute('innerHTML'))] = float(((percent.get_attribute('innerHTML')).split('%'))[0]) / 100
+        customWeightDict[str(context.get_attribute('innerHTML'))] = float(((percent.get_attribute('innerHTML')).split('%'))[0]) / 100
         pointsDict[str(context.get_attribute('innerHTML'))] = 0
         avgDict[str(context.get_attribute('innerHTML'))] = 0
         realAvgDict[str(context.get_attribute('innerHTML'))] = 0
@@ -170,21 +171,21 @@ def avg():
         avgGradeF += realAvgDict[k]
         userGradeF += realUserDict[k]
     clear()
-    print("+----------------+------------------+---------------------+")
-    print("|    Category    |    Your Score    |    Class Average    |")
-    print("+----------------+------------------+---------------------+")
+    print("+----------------+--------------+------------------+---------------------+")
+    print("|    Category    |    Weight    |    Your Score    |    Class Average    |")
+    print("+----------------+--------------+------------------+---------------------+")
            
     for key, value in userDict.items():
-        print("| " + key + " "* (14 - len(key)) + " | " + str("{:.2f}".format(float(value) / float(pointsDict[key]) * 100))[:5] + "%           " + "| " + str("{:.2f}".format(float(avgDict[key]) / float(pointsDict[key]) * 100))[:5] + "%              " + "|")
-    print("+----------------+------------------+---------------------+")
-    print("| Weighted       | " + "{:.2f}".format(float(userGradeF)) + "%           " + "| " + "{:.2f}".format(float(avgGradeF)) + "%              " + "|")
-    print("| Total          |                  |                     |")
-    print("+----------------+------------------+---------------------+")
-    # print("\navg" + str(avgDict))
-    # print("\nusr" + str(userDict))
-    # print("\nCurrent average class grade (without counting any extra credit) is " + str(avgGradeF))
-    # print("Your current grade (without counting any extra credit) is " + str(userGradeF))
-    # print("\n")
+        print("| " + key + " "* (14 - len(key)) + " | " + str("{:.2f}".format(float(customWeightDict[key])*100))[:5] + "%      " + " | " + str("{:.2f}".format(float(value) / float(pointsDict[key]) * 100))[:5] + "%           " + "| " + str("{:.2f}".format(float(avgDict[key]) / float(pointsDict[key]) * 100))[:5] + "%              " + "|")
+    
+    print("+----------------+--------------+------------------+---------------------+")
+    print("| Weighted       | 100.00%      | " + "{:.2f}".format(float(userGradeF)) + "%           " + "| " + "{:.2f}".format(float(avgGradeF)) + "%              " + "|")
+    print("| Total          |              |                  |                     |")
+    print("+----------------+--------------+------------------+---------------------+")
+
+    addScores = raw_input("\nWould you like to add any 'what if' scores and recalculate? (y/n): ")
+    if (addScores == 'y') or (addScores == 'yes') or (addScores == 'Y') or (addScores == 'Yes'):
+        print("okay")
 
 # --------------- Curses code below ---------------
 menu = ['Class Average', 'Calculate Score', 'Exit']
