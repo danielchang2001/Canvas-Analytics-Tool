@@ -179,7 +179,7 @@ def avg():
         print("| " + key + " "* (14 - len(key)) + " | " + str("{:.2f}".format(float(customWeightDict[key])*100))[:5] + "%      " + " | " + str("{:.2f}".format(float(value) / float(pointsDict[key]) * 100))[:5] + "%           " + "| " + str("{:.2f}".format(float(avgDict[key]) / float(pointsDict[key]) * 100))[:5] + "%              " + "|")
     
     print("+----------------+--------------+------------------+---------------------+")
-    print("| Weighted       | 100.00%      | " + "{:.2f}".format(float(userGradeF)) + "%           " + "| " + "{:.2f}".format(float(avgGradeF)) + "%              " + "|")
+    print("| Weighted       | 100.0%       | " + "{:.2f}".format(float(userGradeF)) + "%           " + "| " + "{:.2f}".format(float(avgGradeF)) + "%              " + "|")
     print("| Total          |              |                  |                     |")
     print("+----------------+--------------+------------------+---------------------+")
 
