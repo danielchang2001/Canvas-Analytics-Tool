@@ -202,17 +202,18 @@ def avg():
     print("+----------------+--------------+------------------+-----------------+")
 
 
-    options = raw_input("\nType 'p' to print each individual grade\nType 'a' to add a 'What If' score to your total grade\nType 'r' to remove a score from your total grade\n\n     ")
-
-    if options == 'p':
-        for i in range(len(asgnList)):
-            print(asgnList[i])
-            print(contextList[i])
-            print(scoreList[i])
-            print(avgScoreList[i])
-            print(posPointsList[i])
-
-
+    while 1:    
+        options = raw_input("\nType 'p' to print each individual grade\nType 'a' to add a 'What If' score to your total grade\nType 'r' to remove a score from your total grade\nType 'q' to quit\n\n     ")
+        if options == 'q':
+            curses.wrapper(main)
+            break;    
+        if options == 'p':
+            print("+--------------------+--------------------+--------------------+--------------------+")
+            print("|        Name        |        Type        |     Your Score     |     Avg. Score     |")
+            print("+--------------------+--------------------+--------------------+--------------------+")
+            for i in range(len(asgnList)):
+                print("| " + str(asgnList[i])[:18] + " "*(18 - len(str(asgnList[i]))) + " | " + str(contextList[i])[:18] + " "*(19 - len(str(contextList[i]))) + "| "+ str("{:.2f}".format(float(scoreList[i])/float(posPointsList[i])*100))[:5] + "%             " + "| " + str("{:.2f}".format(float(avgScoreList[i])/float(posPointsList[i])*100))[:5] + "%             " + "|")
+            print("+--------------------+--------------------+--------------------+--------------------+")
     # while 1:
         # addScores = raw_input("\nWould you like to add any 'What If' assignments and recalculate your grade? (y/n): ")
         # if (addScores == 'y') or (addScores == 'yes') or (addScores == 'Y') or (addScores == 'Yes'):
