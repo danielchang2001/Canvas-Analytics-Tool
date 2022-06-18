@@ -82,6 +82,7 @@ def avg():
     weightDict = {}
     customWeightDict = {}
     pointsDict = {}
+    avgPointsDict = {}
     avgDict = {}
     realAvgDict = {}
     userDict = {}
@@ -100,6 +101,7 @@ def avg():
         weightDict[str(context.get_attribute('innerHTML'))] = float(((percent.get_attribute('innerHTML')).split('%'))[0]) / 100
         customWeightDict[str(context.get_attribute('innerHTML'))] = float(((percent.get_attribute('innerHTML')).split('%'))[0]) / 100
         pointsDict[str(context.get_attribute('innerHTML'))] = 0
+        avgPointsDict[str(context.get_attribute('innerHTML'))] = 0
         avgDict[str(context.get_attribute('innerHTML'))] = 0
         realAvgDict[str(context.get_attribute('innerHTML'))] = 0
         userDict[str(context.get_attribute('innerHTML'))] = 0
@@ -166,6 +168,7 @@ def avg():
             for k in weightDict.keys():
                 if k == context:
                     pointsDict[k] += float(pointsPos)
+                    avgPointsDict[k] += float(pointsPos)
                     avgDict[k] += float(avg)
                     userDict[k] += float(userGradeF)
 
@@ -194,7 +197,7 @@ def avg():
     print("+----------------+--------------+------------------+-----------------+")
            
     for key, value in userDict.items():
-        print("| " + key + " "* (14 - len(key)) + " | " + str("{:.2f}".format(float(customWeightDict[key])*100))[:5] + "%      " + " | " + str("{:.2f}".format(float(value) / float(pointsDict[key]) * 100))[:5] + "%           " + "| " + str("{:.2f}".format(float(avgDict[key]) / float(pointsDict[key]) * 100))[:5] + "%          " + "|")
+        print("| " + key[:14] + " "* (14 - len(key)) + " | " + str("{:.2f}".format(float(customWeightDict[key])*100))[:5] + "%      " + " | " + str("{:.2f}".format(float(value) / float(pointsDict[key]) * 100))[:5] + "%           " + "| " + str("{:.2f}".format(float(avgDict[key]) / float(pointsDict[key]) * 100))[:5] + "%          " + "|")
     
     print("+----------------+--------------+------------------+-----------------+")
     print("| Weighted       | 100.0%       | " + "{:.2f}".format(float(userGradeF)) + "%           " + "| " + "{:.2f}".format(float(avgGradeF)) + "%          " + "|")
@@ -203,17 +206,60 @@ def avg():
 
 
     while 1:    
-        options = raw_input("\nType 'p' to print each individual grade\nType 'a' to add a 'What If' score to your total grade\nType 'r' to remove a score from your total grade\nType 'q' to quit\n\n     ")
+        options = raw_input("\nType 'p' to print each individual grade\nType 's' to print stats again\nType 'a' to add a 'What If' score to your total grade\nType 'r' to remove a score from your total grade\nType 'q' to quit\n\n     ")
         if options == 'q':
             curses.wrapper(main)
             break;    
         if options == 'p':
+            clear()
+            print("\n")
             print("+--------------------+--------------------+--------------------+--------------------+")
             print("|        Name        |        Type        |     Your Score     |     Avg. Score     |")
             print("+--------------------+--------------------+--------------------+--------------------+")
             for i in range(len(asgnList)):
-                print("| " + str(asgnList[i])[:18] + " "*(18 - len(str(asgnList[i]))) + " | " + str(contextList[i])[:18] + " "*(19 - len(str(contextList[i]))) + "| "+ str("{:.2f}".format(float(scoreList[i])/float(posPointsList[i])*100))[:5] + "%             " + "| " + str("{:.2f}".format(float(avgScoreList[i])/float(posPointsList[i])*100))[:5] + "%             " + "|")
+                print("| " + str(asgnList[i])[:18] + " "*(18 - len(str(asgnList[i]))) + " | " + str(contextList[i])[:18] + " "*(19 - len(str(contextList[i]))) + "| "+ str("{:.2f}".format(float(scoreList[i])/float(posPointsList[i])*100))[:5] + "%             " + "| " + str("{:.3f}".format(float(avgScoreList[i])/float(posPointsList[i])*100))[:5] + "%             " + "|")
             print("+--------------------+--------------------+--------------------+--------------------+")
+        if options == 'a':
+            newContext = raw_input("\nEnter category (case sensitive): ")
+            newScore = raw_input("Enter your score: ")
+            newPosPoints = raw_input("Enter total possible points: ")
+            asgnList.append("What If Assignment")
+            contextList.append(newContext)
+            scoreList.append(float(newScore))
+            avgScoreList.append(0)
+            posPointsList.append(float(newPosPoints))
+            userDict[newContext] += float(newScore)
+            pointsDict[newContext] += float(newPosPoints)
+            print("\n     What If Assignment has been added and tables have been updated. \nEnter 'p' or 's' to view updates.\n") 
+        if options == 's':
+            avgGradeF = 0
+            userGradeF = 0
+            for k in weightDict.keys():
+                if (customWeights == 'y') or (customWeights == 'yes') or (customWeights == 'Y') or (customWeights == 'Yes'):
+                    realAvgDict[k] = (float(avgDict[k]) / float(avgPointsDict[k])) * 100 * customWeightDict[k]
+                    realUserDict[k] = (float(userDict[k]) / float(pointsDict[k])) * 100 * customWeightDict[k]
+                if customWeights == 'n' or customWeights == 'no' or customWeights == 'N' or customWeights == 'No':
+                    realAvgDict[k] = (float(avgDict[k]) / float(avgPointsDict[k])) * 100 * weightDict[k]
+                    realUserDict[k] = (float(userDict[k]) / float(pointsDict[k])) * 100 * weightDict[k]
+                avgGradeF += realAvgDict[k]
+                userGradeF += realUserDict[k]
+            clear()
+            print("\n")
+            print('\033[1m' + className.center(70))
+            print '\033[0m'
+            print("+----------------+--------------+------------------+-----------------+")
+            print("|    Category    |    Weight    |    Your Score    |    Class Avg    |")
+            print("+----------------+--------------+------------------+-----------------+")
+                
+            for key, value in userDict.items():
+                print("| " + key[:14] + " "* (14 - len(key)) + " | " + str("{:.2f}".format(float(customWeightDict[key])*100))[:5] + "%      " + " | " + str("{:.2f}".format(float(value) / float(pointsDict[key]) * 100))[:5] + "%           " + "| " + str("{:.2f}".format(float(avgDict[key]) / float(avgPointsDict[key]) * 100))[:5] + "%          " + "|")
+            
+            print("+----------------+--------------+------------------+-----------------+")
+            print("| Weighted       | 100.0%       | " + "{:.2f}".format(float(userGradeF)) + "%           " + "| " + "{:.2f}".format(float(avgGradeF)) + "%          " + "|")
+            print("| Total          |              |                  |                 |")
+            print("+----------------+--------------+------------------+-----------------+")
+        
+
     # while 1:
         # addScores = raw_input("\nWould you like to add any 'What If' assignments and recalculate your grade? (y/n): ")
         # if (addScores == 'y') or (addScores == 'yes') or (addScores == 'Y') or (addScores == 'Yes'):
