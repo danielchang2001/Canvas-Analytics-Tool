@@ -74,6 +74,11 @@ def avg():
     # avgDict - Average points of each category with respective values in 0.XX format.
     # realAvgDict - Final calculated average of each respective category. All category values added up divided by 100 equals the final class average.
 
+    asgnList = []
+    contextList = []
+    scoreList = []
+    avgScoreList = []
+    posPointsList = []
     weightDict = {}
     customWeightDict = {}
     pointsDict = {}
@@ -137,19 +142,25 @@ def avg():
             title = titleEl.get_attribute("innerHTML")
             contextEl = tr.find_element(By.CLASS_NAME, 'context')
             context = contextEl.get_attribute("innerHTML")
+
+            asgnList.append(title)
+            contextList.append(context)
             # print(title)
             # print(context)
             
             # Find total possible points for each score
             pointsPossible = tr.find_element(By.CLASS_NAME, 'points_possible')
             pointsPos = pointsPossible.text
+            posPointsList.append(float(pointsPos))
             # print("out of: ", float(pointsPos))
 
             # Find user's score
             gradeParent = tr.find_element(By.CLASS_NAME, 'grade')
             userGrade = gradeParent.get_attribute('innerHTML').split('</span>\n                  ')
             userGradeF = userGrade[-1].split('\n')[0]
+            scoreList.append(float(userGradeF))
             # print("grade:", float(userGradeF))
+            avgScoreList.append(float(avg))
 
             # Adds up total average points and total points possible and puts them in dictionaries
             for k in weightDict.keys():
@@ -176,31 +187,48 @@ def avg():
         userGradeF += realUserDict[k]
     clear()
     print("\n")
-    print('\033[1m' + className.center(74))
+    print('\033[1m' + className.center(70))
     print '\033[0m'
-    print("+----------------+--------------+------------------+---------------------+")
-    print("|    Category    |    Weight    |    Your Score    |    Class Average    |")
-    print("+----------------+--------------+------------------+---------------------+")
+    print("+----------------+--------------+------------------+-----------------+")
+    print("|    Category    |    Weight    |    Your Score    |    Class Avg    |")
+    print("+----------------+--------------+------------------+-----------------+")
            
     for key, value in userDict.items():
-        print("| " + key + " "* (14 - len(key)) + " | " + str("{:.2f}".format(float(customWeightDict[key])*100))[:5] + "%      " + " | " + str("{:.2f}".format(float(value) / float(pointsDict[key]) * 100))[:5] + "%           " + "| " + str("{:.2f}".format(float(avgDict[key]) / float(pointsDict[key]) * 100))[:5] + "%              " + "|")
+        print("| " + key + " "* (14 - len(key)) + " | " + str("{:.2f}".format(float(customWeightDict[key])*100))[:5] + "%      " + " | " + str("{:.2f}".format(float(value) / float(pointsDict[key]) * 100))[:5] + "%           " + "| " + str("{:.2f}".format(float(avgDict[key]) / float(pointsDict[key]) * 100))[:5] + "%          " + "|")
     
-    print("+----------------+--------------+------------------+---------------------+")
-    print("| Weighted       | 100.0%       | " + "{:.2f}".format(float(userGradeF)) + "%           " + "| " + "{:.2f}".format(float(avgGradeF)) + "%              " + "|")
-    print("| Total          |              |                  |                     |")
-    print("+----------------+--------------+------------------+---------------------+")
+    print("+----------------+--------------+------------------+-----------------+")
+    print("| Weighted       | 100.0%       | " + "{:.2f}".format(float(userGradeF)) + "%           " + "| " + "{:.2f}".format(float(avgGradeF)) + "%          " + "|")
+    print("| Total          |              |                  |                 |")
+    print("+----------------+--------------+------------------+-----------------+")
 
-    while 1:
-        addScores = raw_input("\nWould you like to add a 'what if' score and recalculate your grade? (y/n): ")
-        if (addScores == 'y') or (addScores == 'yes') or (addScores == 'Y') or (addScores == 'Yes'):
-            print("okay")
-        else:
-            curses.wrapper(main)
-            break
+
+    options = raw_input("\nType 'p' to print each individual grade\nType 'a' to add a 'What If' score to your total grade\nType 'r' to remove a score from your total grade\n\n     ")
+
+    if options == 'p':
+        for i in range(len(asgnList)):
+            print(asgnList[i])
+            print(contextList[i])
+            print(scoreList[i])
+            print(avgScoreList[i])
+            print(posPointsList[i])
+
+
+    # while 1:
+        # addScores = raw_input("\nWould you like to add any 'What If' assignments and recalculate your grade? (y/n): ")
+        # if (addScores == 'y') or (addScores == 'yes') or (addScores == 'Y') or (addScores == 'Yes'):
+        #     newCateg = raw_input("\n     Type assignment category (case sensitive): ")
+        #     newPoints = raw_input("\n     Type total possible points: ")
+        #     newScore = raw_input("\n     Type score earned: ")
+
+            
+
+        # else:
+        #     curses.wrapper(main)
+        #     break
     
 
 # --------------- Curses code below ---------------
-menu = ['Class Average', 'Calculate Score', 'Exit']
+menu = ['You vs. Avg', '', 'Exit']
 
 # Print menu
 def print_menu(stdscr, currentRow):
