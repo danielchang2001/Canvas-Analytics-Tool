@@ -23,6 +23,7 @@ def clear():
 def avg():
     clear()
     # Login input
+    link = raw_input("\nYour Canvas course's 'Grades' page URL: ")
     email = raw_input("\nEnter your CruzID: ")
     password = getpass("Enter your Gold password: ")
     customWeights = raw_input("\nWill you be entering custom weights? (y/n): ")
@@ -34,7 +35,7 @@ def avg():
     driver.implicitly_wait(8)
 
     # Canvas
-    driver.get('https://canvas.ucsc.edu/courses/52588/grades')
+    driver.get(link)
 
     # Send username
     emailBox = driver.find_element(By.ID, "username")
@@ -186,6 +187,9 @@ def avg():
     addScores = raw_input("\nWould you like to add any 'what if' scores and recalculate? (y/n): ")
     if (addScores == 'y') or (addScores == 'yes') or (addScores == 'Y') or (addScores == 'Yes'):
         print("okay")
+    else:
+        curses.wrapper(main)
+    
 
 # --------------- Curses code below ---------------
 menu = ['Class Average', 'Calculate Score', 'Exit']
