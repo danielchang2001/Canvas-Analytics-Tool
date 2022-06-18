@@ -34,7 +34,7 @@ def avg():
     driver.implicitly_wait(8)
 
     # Canvas
-    driver.get('https://canvas.ucsc.edu/courses/52596/grades')
+    driver.get('https://canvas.ucsc.edu/courses/52588/grades')
 
     # Send username
     emailBox = driver.find_element(By.ID, "username")
@@ -170,12 +170,21 @@ def avg():
         avgGradeF += realAvgDict[k]
         userGradeF += realUserDict[k]
     clear()
-    print("==============================================")
-    print("===== Average class grade Vs. Your grade =====")
-    print("==============================================")
-    print("\nCurrent average class grade (without counting any extra credit) is " + str(avgGradeF))
-    print("Your current grade (without counting any extra credit) is " + str(userGradeF))
-    print("\n")
+    print("+----------------+------------------+---------------------+")
+    print("|    Category    |    Your Score    |    Class Average    |")
+    print("+----------------+------------------+---------------------+")
+           
+    for key, value in userDict.items():
+        print("| " + key + " "* (14 - len(key)) + " | " + str("{:.2f}".format(float(value) / float(pointsDict[key]) * 100))[:5] + "%           " + "| " + str("{:.2f}".format(float(avgDict[key]) / float(pointsDict[key]) * 100))[:5] + "%              " + "|")
+    print("+----------------+------------------+---------------------+")
+    print("| Weighted       | " + "{:.2f}".format(float(userGradeF)) + "%           " + "| " + "{:.2f}".format(float(avgGradeF)) + "%              " + "|")
+    print("| Total          |                  |                     |")
+    print("+----------------+------------------+---------------------+")
+    # print("\navg" + str(avgDict))
+    # print("\nusr" + str(userDict))
+    # print("\nCurrent average class grade (without counting any extra credit) is " + str(avgGradeF))
+    # print("Your current grade (without counting any extra credit) is " + str(userGradeF))
+    # print("\n")
 
 # --------------- Curses code below ---------------
 menu = ['Class Average', 'Calculate Score', 'Exit']
