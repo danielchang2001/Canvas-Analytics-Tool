@@ -324,7 +324,7 @@ def avg():
     
 
 # --------------- Curses code below ---------------
-menu = ['You vs. Avg', '', 'Exit']
+menu = ['Start', 'Exit']
 
 # Print menu
 def print_menu(stdscr, currentRow):
@@ -336,10 +336,10 @@ def print_menu(stdscr, currentRow):
         y = h//2 - len(menu)//2 + i
         if i == currentRow:
             stdscr.attron(curses.color_pair(1))
-            stdscr.addstr(y,x,row)
+            stdscr.addstr(y,x-10,row)
             stdscr.attroff(curses.color_pair(1))
         else:
-            stdscr.addstr(y, x, row)
+            stdscr.addstr(y, x-10, row)
 
     stdscr.refresh()
 
@@ -365,7 +365,7 @@ def main(stdscr):
             if currentRow == len(menu)-1:
                 break
             # If class average chosen
-            elif currentRow == len(menu)-3:
+            elif currentRow == len(menu)-2:
                 stdscr.refresh()
                 curses.endwin()
                 avg()
