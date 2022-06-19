@@ -8,6 +8,10 @@ Command line application that displays statistics on a student's performance com
 
 Designed using Python and Selenium Python API.
 
+## Demo
+
+https://www.youtube.com/watch?v=vM7_ztkZ1kw
+
 ## Getting Started
 
 ### Dependencies
