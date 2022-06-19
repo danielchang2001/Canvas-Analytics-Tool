@@ -25,5 +25,4 @@ Designed using Python and Selenium Python API.
 
 ## Acknowledgments
 
-Inspiration, code snippets, etc.
 * [Curses Main Menu](https://www.youtube.com/watch?v=zwMsmBsC1GM)
