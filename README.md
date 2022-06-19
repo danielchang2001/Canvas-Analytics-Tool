@@ -17,7 +17,6 @@ https://www.youtube.com/watch?v=vM7_ztkZ1kw
 ### Dependencies
 
 * Install Selenium: pip install selenium
-* Must have Firefox browser installed.
 
 ### Installing
 
