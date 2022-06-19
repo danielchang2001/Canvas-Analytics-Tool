@@ -1,6 +1,6 @@
 # Canvas Grade Analytics Tool
 
-Displays statistics on your performance to the class average for any class on Canvas. Includes tool that allows can be added or removed to calculate potential grade.
+Displays statistics on your performance to the class average for any class on Canvas. Includes tool to remove and add new assignments to calculate potential grade.
 
 ## Description
 
