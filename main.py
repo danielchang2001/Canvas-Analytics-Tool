@@ -5,7 +5,6 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 
 from getpass import getpass
-from bs4 import BeautifulSoup
 
 import time
 import curses
