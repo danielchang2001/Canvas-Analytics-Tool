@@ -1,16 +1,18 @@
 # Canvas Grade Analytics Tool
 
-Displays statistics on your performance to the class average for any class on Canvas. Includes tool to remove and add new assignments to calculate potential grade.
+Gives a more detailed analysis for a user's grade on a Canvas course using web scraping. Includes grade calculator tool.
 
 ## Description
 
-An in-depth paragraph about your project and overview of use.
+Command line application that displays statistics on a student's performance to the average grade for any class on Canvas. Allows user to choose custom weights for each grading category in case the ones listed on Canvas are not accurate. Includes tool that removes and adds new 'what if' assignments, calculates potential grades, and redisplays updated statistics in real time. Includes individual assignment grade printing and also a simple curses main menu GUI.
+
+Designed using Python and Selenium Python API.
 
 ## Getting Started
 
 ### Dependencies
 
-* Describe any prerequisites, libraries, OS version, etc., needed before installing program.
+* pip install selenium
 * ex. Windows 10
 
 ### Installing
