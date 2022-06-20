@@ -97,8 +97,9 @@ def avg():
         if (customWeights == 'y') or (customWeights == 'yes') or (customWeights == 'Y') or (customWeights == 'Yes'):
             customWeight = raw_input("Enter custom weight for '" + str(context.get_attribute('innerHTML')) + "' category (eg. type 40 if 40%): ")
             customWeightDict[str(context.get_attribute('innerHTML'))] = float(customWeight)  / 100
+        else:
+            customWeightDict[str(context.get_attribute('innerHTML'))] = float(((percent.get_attribute('innerHTML')).split('%'))[0]) / 100
         weightDict[str(context.get_attribute('innerHTML'))] = float(((percent.get_attribute('innerHTML')).split('%'))[0]) / 100
-        customWeightDict[str(context.get_attribute('innerHTML'))] = float(((percent.get_attribute('innerHTML')).split('%'))[0]) / 100
         pointsDict[str(context.get_attribute('innerHTML'))] = 0
         avgPointsDict[str(context.get_attribute('innerHTML'))] = 0
         avgDict[str(context.get_attribute('innerHTML'))] = 0
