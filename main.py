@@ -199,14 +199,19 @@ def avg():
     print("+----------------+--------------+------------------+-----------------+")
     print("|    Category    |    Weight    |    Your Score    |    Class Avg    |")
     print("+----------------+--------------+------------------+-----------------+")
-           
+    totalWeight = 0
+    for key, value in customWeightDict.items():
+        if float(pointsDict[key]) == 0 or float(avgPointsDict[key]) == 0:
+            continue
+        totalWeight += float(value)
+        
     for key, value in userDict.items():
         if float(pointsDict[key]) == 0 or float(avgPointsDict[key]) == 0:
             continue
         print("| " + key[:14] + " "* (14 - len(key)) + " | " + str("{:.2f}".format(float(customWeightDict[key])*100))[:5] + "%      " + " | " + str("{:.2f}".format(float(value) / float(pointsDict[key]) * 100))[:5] + "%           " + "| " + str("{:.2f}".format(float(avgDict[key]) / float(pointsDict[key]) * 100))[:5] + "%          " + "|")
     
     print("+----------------+--------------+------------------+-----------------+")
-    print("| Weighted       | 100.0%       | " + "{:.2f}".format(float(userGradeF)) + "%           " + "| " + "{:.2f}".format(float(avgGradeF)) + "%          " + "|")
+    print("| Weighted       | " + ("{:.2f}".format(float(totalWeight)* 100))[:5] + "%       | " + "{:.2f}".format(float(userGradeF)) + "%           " + "| " + "{:.2f}".format(float(avgGradeF)) + "%          " + "|")
     print("| Total          |              |                  |                 |")
     print("+----------------+--------------+------------------+-----------------+")
 

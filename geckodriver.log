@@ -13891,3 +13891,121 @@ Exiting due to channel error.
 Exiting due to channel error.
 Exiting due to channel error.
 Exiting due to channel error.
+1655760934403	geckodriver	INFO	Listening on 127.0.0.1:50404
+1655760935434	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/yt/06_b4rzx4cqcc406f73t7jc40000gn/T/rust_mozprofileeiirky"
+1655760935962	Marionette	INFO	Marionette enabled
+2022-06-20 14:35:36.591 firefox-bin[65482:6314578] Warning: Expected min height of view: (<NSButton: 0x122e43800>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2022-06-20 14:35:36.591 firefox-bin[65482:6314578] Warning: Expected min height of view: (<NSButton: 0x12e43c000>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2022-06-20 14:35:36.592 firefox-bin[65482:6314578] Warning: Expected min height of view: (<NSButton: 0x12e43e800>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2022-06-20 14:35:36.592 firefox-bin[65482:6314578] Warning: Expected min height of view: (<NSButton: 0x12e43ac00>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2022-06-20 14:35:36.593 firefox-bin[65482:6314578] Warning: Expected min height of view: (<NSButton: 0x12e43d000>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2022-06-20 14:35:36.593 firefox-bin[65482:6314578] Warning: Expected min height of view: (<NSPopoverTouchBarItemButton: 0x12e43ec00>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2022-06-20 14:35:36.594 firefox-bin[65482:6314578] Warning: Expected min height of view: (<NSPopoverTouchBarItemButton: 0x12e4e2800>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/yt/06_b4rzx4cqcc406f73t7jc40000gn/T/rust_mozprofileeiirky/search.json.mozlz4", (void 0)))
+console.error: BackgroundUpdate: 
+  _reasonsToNotScheduleUpdates: Failed to check for Maintenance Service Registry Key: [Exception... "Component returned failure code: 0x80004001 (NS_ERROR_NOT_IMPLEMENTED) [nsIUpdateProcessor.getServiceRegKeyExists]"  nsresult: "0x80004001 (NS_ERROR_NOT_IMPLEMENTED)"  location: "JS frame :: resource://gre/modules/BackgroundUpdate.jsm :: _reasonsToNotScheduleUpdates :: line 241"  data: no]
+1655760937549	Marionette	INFO	Listening on port 50436
+Read port: 50436
+1655760937606	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://login.ucsc.edu"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://login.ucsc.edu"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1655760939269	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://api-268194b0.duosecurity.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1655760939675	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://api-268194b0.duosecurity.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://login.ucsc.edu"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://login.ucsc.edu"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://login.ucsc.edu"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://login.ucsc.edu"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1655761028502	Marionette	INFO	Stopped listening on port 50436
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+
+###!!! [Parent][PImageBridgeParent] Error: RunMessage(msgname=PImageBridge::Msg_WillClose) Channel closing: too late to send/recv, messages will be lost
+
+1655761038908	geckodriver	INFO	Listening on 127.0.0.1:50502
+1655761039933	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/yt/06_b4rzx4cqcc406f73t7jc40000gn/T/rust_mozprofilemy0sro"
+1655761040415	Marionette	INFO	Marionette enabled
+2022-06-20 14:37:21.079 firefox-bin[65556:6316097] Warning: Expected min height of view: (<NSButton: 0x135a1dc00>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2022-06-20 14:37:21.080 firefox-bin[65556:6316097] Warning: Expected min height of view: (<NSButton: 0x135a22000>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2022-06-20 14:37:21.080 firefox-bin[65556:6316097] Warning: Expected min height of view: (<NSButton: 0x135a21000>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2022-06-20 14:37:21.081 firefox-bin[65556:6316097] Warning: Expected min height of view: (<NSButton: 0x135a20400>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2022-06-20 14:37:21.082 firefox-bin[65556:6316097] Warning: Expected min height of view: (<NSButton: 0x135a1e800>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2022-06-20 14:37:21.082 firefox-bin[65556:6316097] Warning: Expected min height of view: (<NSPopoverTouchBarItemButton: 0x135a22c00>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2022-06-20 14:37:21.083 firefox-bin[65556:6316097] Warning: Expected min height of view: (<NSPopoverTouchBarItemButton: 0x135a87400>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/yt/06_b4rzx4cqcc406f73t7jc40000gn/T/rust_mozprofilemy0sro/search.json.mozlz4", (void 0)))
+console.error: BackgroundUpdate: 
+  _reasonsToNotScheduleUpdates: Failed to check for Maintenance Service Registry Key: [Exception... "Component returned failure code: 0x80004001 (NS_ERROR_NOT_IMPLEMENTED) [nsIUpdateProcessor.getServiceRegKeyExists]"  nsresult: "0x80004001 (NS_ERROR_NOT_IMPLEMENTED)"  location: "JS frame :: resource://gre/modules/BackgroundUpdate.jsm :: _reasonsToNotScheduleUpdates :: line 241"  data: no]
+1655761042099	Marionette	INFO	Listening on port 50532
+Read port: 50532
+1655761042198	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://login.ucsc.edu"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://login.ucsc.edu"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1655761044497	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://api-268194b0.duosecurity.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1655761044917	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://api-268194b0.duosecurity.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://login.ucsc.edu"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://login.ucsc.edu"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://login.ucsc.edu"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://login.ucsc.edu"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1655761134530	geckodriver	INFO	Listening on 127.0.0.1:50602
+1655761145625	geckodriver	INFO	Listening on 127.0.0.1:50606
+1655761146657	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/yt/06_b4rzx4cqcc406f73t7jc40000gn/T/rust_mozprofilejflnmg"
+1655761147174	Marionette	INFO	Marionette enabled
+2022-06-20 14:39:07.819 firefox-bin[65645:6317783] Warning: Expected min height of view: (<NSButton: 0x11cd8e000>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2022-06-20 14:39:07.819 firefox-bin[65645:6317783] Warning: Expected min height of view: (<NSButton: 0x128be1000>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2022-06-20 14:39:07.820 firefox-bin[65645:6317783] Warning: Expected min height of view: (<NSButton: 0x108ba7000>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2022-06-20 14:39:07.820 firefox-bin[65645:6317783] Warning: Expected min height of view: (<NSButton: 0x128be5400>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2022-06-20 14:39:07.821 firefox-bin[65645:6317783] Warning: Expected min height of view: (<NSButton: 0x128be1800>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2022-06-20 14:39:07.821 firefox-bin[65645:6317783] Warning: Expected min height of view: (<NSPopoverTouchBarItemButton: 0x128be6400>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2022-06-20 14:39:07.822 firefox-bin[65645:6317783] Warning: Expected min height of view: (<NSPopoverTouchBarItemButton: 0x128d6e400>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/yt/06_b4rzx4cqcc406f73t7jc40000gn/T/rust_mozprofilejflnmg/search.json.mozlz4", (void 0)))
+console.error: BackgroundUpdate: 
+  _reasonsToNotScheduleUpdates: Failed to check for Maintenance Service Registry Key: [Exception... "Component returned failure code: 0x80004001 (NS_ERROR_NOT_IMPLEMENTED) [nsIUpdateProcessor.getServiceRegKeyExists]"  nsresult: "0x80004001 (NS_ERROR_NOT_IMPLEMENTED)"  location: "JS frame :: resource://gre/modules/BackgroundUpdate.jsm :: _reasonsToNotScheduleUpdates :: line 241"  data: no]
+1655761148729	Marionette	INFO	Listening on port 50625
+Read port: 50625
+1655761148845	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://login.ucsc.edu"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://login.ucsc.edu"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1655761150656	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://api-268194b0.duosecurity.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1655761151077	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://api-268194b0.duosecurity.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://login.ucsc.edu"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://login.ucsc.edu"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://login.ucsc.edu"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://login.ucsc.edu"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
